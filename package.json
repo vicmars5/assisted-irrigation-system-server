@@ -1,0 +1,19 @@
+{
+  "name": "assisted-irrigation-system-server",
+  "version": "0.0.0",
+  "description": "Control server for irrigation system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicmars5/assisted-irrigation-system-server.git"
+  },
+  "author": "Victor Diaz, Fernando Riveros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vicmars5/assisted-irrigation-system-server/issues"
+  },
+  "homepage": "https://github.com/vicmars5/assisted-irrigation-system-server#readme"
+}
