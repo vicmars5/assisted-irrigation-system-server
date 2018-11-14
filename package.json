@@ -4,7 +4,7 @@
   "description": "Control server for irrigation system",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "dev": "nodemon index"
   },
   "repository": {
@@ -18,13 +18,17 @@
   },
   "homepage": "https://github.com/vicmars5/assisted-irrigation-system-server#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "koa": "^2.6.2",
     "koa-body": "^4.0.4",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.6"
   }
 }
