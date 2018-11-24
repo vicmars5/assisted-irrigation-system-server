@@ -1,5 +1,7 @@
 const KoaRouter = require('koa-router')
 
+const FeedRouter = require('./feed')
+
 const router = new KoaRouter()
 
 router.get('/', (ctx) => {
@@ -7,7 +9,8 @@ router.get('/', (ctx) => {
 })
 
 const routes = [
-  router
+  router,
+  FeedRouter
 ]
 
 module.exports = routes
