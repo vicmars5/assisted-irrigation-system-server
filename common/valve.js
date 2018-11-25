@@ -27,6 +27,11 @@ class Valve {
     const { data } = await this.http.get(`${pin}/${strState}`)
     return data
   }
+
+  async getState() {
+    const { data } = await this.http.get(``)
+    return data;
+  }
 }
 
 module.exports = Valve
