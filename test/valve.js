@@ -6,15 +6,30 @@ describe('Valve API', () => {
     host: 'http://192.168.0.32/'
   })
 
-  it('Write ON to pin 5', async () => {
-    try {
-      const data = await valve.power('5', true)
-      console.log(data)
-    }
-    catch (err) {
-      console.error(err)
-      throw err;
-    }
+  it('Write ON to pins 4 and 5', async () => {
+    await valve.power('4', true)
+    const data = await valve.power('5', true)
+    Expect(data).to.eql({
+      '4': true,
+      '5': true
+    });
+  })
+
+  it('Write OFF to pin 5', async () => {
+    const data = await valve.power('5', false)
+    Expect(data).to.eql({
+      '4': true,
+      '5': false
+    });
+  })
+
+  it('Write OFF to pins 4 and 5', async () => {
+    await valve.power('4', false)
+    const data = await valve.power('5', false)
+    Expect(data).to.eql({
+      '4': false,
+      '5': false
+    });
   })
 })
 

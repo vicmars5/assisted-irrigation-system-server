@@ -24,7 +24,7 @@ class Valve {
    */
   async power(pin, state = true) {
     const strState = state ? 'on' : 'off'
-    const { data } = await this.http.get(`${pin}/${state}`)
+    const { data } = await this.http.get(`${pin}/${strState}`)
     return data
   }
 }
