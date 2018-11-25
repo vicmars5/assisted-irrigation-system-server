@@ -3,6 +3,7 @@ const Koa = require('koa')
 const Logger = require('koa-logger')
 const Body = require('koa-body')
 const Json = require('koa-json')
+const Cors = require('koa-cors')
 
 const Routes = require('./routes')
 
@@ -11,6 +12,7 @@ const app = new Koa()
 app.use(Logger())
 app.use(Body())
 app.use(Json())
+app.use(Cors())
 
 app.use(async (ctx, next) => {
   try {

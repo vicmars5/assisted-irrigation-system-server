@@ -1,9 +1,5 @@
 const Axios = require('axios')
 
-const http = Axios.create({
-  baseURL: '613893'
-})
-
 class ThingSpeakDevice {
   /**
    * @params {String} id
